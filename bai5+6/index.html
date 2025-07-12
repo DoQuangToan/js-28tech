@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x= 5;
+        var y = 3;
+        console.log(x+y);
+        console.log(x-y);
+        console.log(x*y);
+        console.log(x/y);
+        console.log(x%y);
+        console.log(x++);
+        console.log(x);
+        function tinhDT(r){
+            return (2*r)**2-(r**2)*2;
+        }
+        var dt= tinhDT(5);
+        console.log(dt);
+        var stringg = "cicic";
+         var arr1=stringg.split("").reverse().join("");
+         
+         console.log(arr1==stringg);
+         var img = "<https://cdn.daca.vn/media/blog/lap-trinh/js%20tips%20-%20m%E1%BB%99t%20s%E1%BB%91%20c%C3%A1ch%20vi%E1%BA%BFt%20js%20ng%E1%BA%AFn%20g%E1%BB%8Dn%20h%C6%A1n.png>";
+var title = "JS TIPS - Một số cách viết JS ngắn gọn hơn";
+var desc = "Hôm nay Daca.vn gửi tới các bạn một số những tips để giúp bạn code JS một cách hiệu quả...";
+var url = "<https://daca.vn/js-tips-mot-so-cach-viet-js-ngan-gon-hon>";
+
+
+var string = `
+  <div class="article">
+    <a href="${url}">
+    <div class="inner-image">
+      <img src="${img}" />
+    </div>
+    <div class="inner-content">
+      <h2 class="inner-title">${title}</h2>
+      <p class="inner-desc">${desc}</p>
+    </div>
+    </a>
+  </div>
+`;
+
+
+
+console.log(string);
+var so;
+function chiahet(so){
+
+if(so%3==0&&so%5!=0){
+  console.log("Fizz")
+}
+else if(so%5==0&&so%3!=0){
+  console.log("Buzz")
+}
+else if(so%3==0||so%5==0){
+  console.log("FizzBuzz")
+}
+else if(so%3!=0||so%5!=0){
+  console.log(so);
+}
+else{
+  console.log("Vui long nhap so")
+}
+}
+var check=chiahet();
+
+// chech speed
+var tuocbang= "Ban da bi tuoc giay phep lay xe";
+function speed(x){
+if(x<=70){
+  console.log("Van toc an toan");
+}
+else if(x>70){
+  let vipham=x-70;
+ if(vipham<5){
+  console.log("30000 dong")
+ }
+ else if(vipham>5){
+  let soloi=(vipham/5);
+  let tienphat=Math.floor(soloi)*30000
+  console.log(tienphat)
+}
+}
+}
+var ktspeed=speed(99);
+//
+
+const person = {
+  name: "Le Van A",
+  age: 40,
+  height: 175,
+  country: "Viet Nam",
+  designation: "UI Developer",
+};
+function strinng(conopject){
+  for(let key in conopject ){
+    if(typeof conopject[key] ==="string"){
+      console.log(key,person[key]);
+    }
+  }
+}
+console.log(strinng(person));
+
+// ktra các số từ 2 đến n có phải là số ngta hay 0 nếu phải thì in ra
+function ktasonto(n){
+for(let i=2;i<n;i++){
+  if(n%i===0){
+    return false;
+  }
+}
+return true;
+}
+console.log(ktasonto(5));
+function checksonto(n1){
+  for(let i=2;i<=n1;i++){
+  if(ktasonto(i)){
+    console.log("so nguyên tố :"+ i);
+  }
+}
+}
+checksonto(9);
+function checktime(){
+// chuyển chế độ 12h sang 24h
+
+}
+function convertTime(string) {
+  const time = string.slice(0, -2);
+  const ampm = string.slice(-2);
+  const units = time.split(":");
+
+
+  let hours = units[0];
+  const minutes = units[1];
+  const seconds = units[2];
+
+
+  if (hours === "12") {
+    hours = "00";
+  }
+
+
+  if (ampm === "PM") {
+    hours = parseInt(hours) + 12;
+  }
+
+
+  const newString = [hours, minutes, seconds].join(":");
+
+
+  return newString;
+}
+
+
+var test1 = convertTime("07:05:45PM");
+console.log(test1); // 19:05:45
+
+
+//kiểm tra năm nhuận
+function leapYear(year){
+  if(year%4===0&&year%100!==0){
+    return true;
+  }
+ else if(year%100===0&&year%400===0){
+    return true;
+  }
+  return false;
+}
+console.log(leapYear(2000));
+
+//lấy đuôi mở rộng của 1 file bất kỳ
+
+function extensionFileName(fileName){
+  var arr=fileName.split(".");
+  var dau= arr[0];
+  var duoi= arr[1];
+  return duoi;
+}
+console.log(extensionFileName("test.html"));
+console.log(extensionFileName("abc.java"));
+console.log(extensionFileName("xyz.js"));
+//tham khảo cách 2
+function extensionFilename(fileName) {
+  return fileName.includes(".")
+    ? fileName.split(".").pop()
+    : "Đây không phải tên file.";
+}
+
+
+const input = prompt("Nhập tên file"); // Ví dụ: Nhập abc.java
+if (input.length > 0) {
+  const result = extensionFilename(input);
+  console.log(result);
+}
+
+
+// Trong đó: hàm includes() để check xem trong string đó có tồn tại ký tự nào đó hay không? Nếu có trả về true, nếu không trả về false.
+ 
+// Trả về tên của các người trong mảng
+var arr=[];
+const myFriends = [1, 2, "Nam", "Hùng", 3, 4, "Hòa", 6, "Long"];
+function checkName(myFriends){
+  for(let i=0;i<myFriends.length;i++){
+    if(typeof myFriends[i]==="string"){
+      arr.push(myFriends[i]);
+     
+    }
+  }
+  return arr;
+}
+console.log(checkName(myFriends));
+    </script>
+</body>
+</html>

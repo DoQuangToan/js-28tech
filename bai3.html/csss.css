@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&display=swap');/*day la dong lệnh link để lấy kiểu chữ của font-family */
+.chu2{
+    color: aqua;
+    background: palevioletred;
+    border: 5px;
+    padding: 100px 50px 50px 50px;
+    margin-bottom: 50px;
+    text-align: justify;
+  font-family: "Beiruti", sans-serif;
+  font-style: italic;
+  font-weight:900 ;
+  font-size: 40px;
+}
+.co2{
+  color: aqua;
+  border: 5px;
+  padding: 100px 50px 50px 50px;
+  margin-bottom: 50px;
+  text-align: justify;
+font-family: "Beiruti", sans-serif;
+}
