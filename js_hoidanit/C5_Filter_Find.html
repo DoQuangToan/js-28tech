@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoi dan IT</title>
+</head>
+<body>
+     <h1>
+        Hello World
+    </h1>
+    <script>
+        console.log("My From With HTML")
+       let arr= [1,2,3,4,5,6,7,8,9,10];
+       let Info= [{name: 'QT' , age: '25'},
+                  {name: 'TN' , age: '25'},
+                  {name: 'VP' , age: '28'},
+                  {name: 'TL' , age: '30'},
+                  {name: 'DN' , age: '52'},
+       ];
+      let filter= Info.filter((item,index)=>{
+        return item.age<30 && index<5;
+      })
+      console.log(filter) 
+
+      // còn Find thì tương tự Filter nhưng Filter là trả về 1 arr còn Find trả về 1 phần tử.
+    </script>
+</body>
+</html>
